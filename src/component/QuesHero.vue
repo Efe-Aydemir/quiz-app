@@ -16,8 +16,15 @@
    <div v-else class="bg-emerald-600 text-black w-[75%] p-5 rounded-xl mt-24 flex flex-col items-center m-auto">
       <h1 class="text-3xl text-gray-900">Number of Correct Questions : {{qucoranscont}}</h1>
    </div>
-   <div>
-      a
+   <div v-if="quesnocrct === 'true'">
+      <div class="p-4 mb-4 text-2xl text-center text-red-700 mx-auto mt-14 w-[50%] bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
+  <span class="font-medium">You gave </span> the wrong answer to the question<br />
+  
+</div>
+<div class="flex justify-center mt-5">
+<button @click="back" class=" w-64 h-16 bg-black text-white text-2xl rounded-full transition-all duration-300 hover:bg-blue-600 hover:text-black">Back</button>   
+</div>
+
    </div>
 </template> 
 
@@ -29,10 +36,11 @@ let quesid = ref(0)
 let end = ref(false)
 let qucoranscont = ref(0)
 let quecorct = ref('')
-//let checkbtn = ref('')
+let checkbtn = ref('')
+let quesnocrct = ref(false)
 
 function getData() {
-   let url = 'https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=boolean'
+   let url = 'https:opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=boolean'
    fetch(url)
       .then(response => {
          return response.json()
@@ -54,17 +62,37 @@ function getData() {
 }
 
 
-// truye click olunduğunda eğer eğer tıklanan tru butanuysa ve ve que true sa getdatayı çağır
-// function trueClick() {
-//    checkbtn.value = 'true'
-//    quesid.value++
-//    if (quecorct.value === 'True' && checkbtn.value === 'true') {
-//       qucoranscont.value += 1
-//       getData()
-//    } else {
-//       qucoranscont.value += 0
-//    }
-// }
+//truye click olunduğunda eğer eğer tıklanan tru butanuysa ve ve que true sa getdatayı çağır
+function trueClick() {
+   checkbtn.value = 'true'
+   quesid.value++
+
+   if (quecorct.value === 'True' && checkbtn.value === 'true') {
+      qucoranscont.value += 1
+      getData()
+   } else {
+      qucoranscont.value += 0
+      quesnocrct.value = 'true'
+      end.value = 'true'
+   }
+}
+
+function falseClick() {
+   checkbtn.value = 'false'
+   quesid.value++
+   if(quecorct.value === 'False' && checkbtn.value === 'false') {
+      qucoranscont.value += 1
+      getData()
+   } else {
+      qucoranscont.value += 0
+      quesnocrct.value = 'true'
+      end.value = 'true'
+   }
+}
+
+function back() {
+   window.location.reload()
+}
 
 onMounted(() => {
    getData();
