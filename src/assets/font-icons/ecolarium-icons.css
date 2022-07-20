@@ -1,0 +1,159 @@
+@font-face {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "ecolarium-icons";
+  src: url("ecolarium-icons.eot?682ce7aa7e5fadb9313c99ed9ae345f5?#iefix") format("embedded-opentype"),
+url("ecolarium-icons.woff?682ce7aa7e5fadb9313c99ed9ae345f5") format("woff"),
+url("ecolarium-icons.ttf?682ce7aa7e5fadb9313c99ed9ae345f5") format("truetype"),
+url("ecolarium-icons.svg?682ce7aa7e5fadb9313c99ed9ae345f5#ecolarium-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.eci {
+  font-family: ecolarium-icons !important;
+  line-height: 1 !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.eci:before {
+  --webkit-backface-visibility:hidden;
+  backface-visibility: hidden;
+}
+
+.arrow-right:before {
+  content: "\f101";
+}
+.boat:before {
+  content: "\f102";
+}
+.building-office:before {
+  content: "\f103";
+}
+.calendar:before {
+  content: "\f104";
+}
+.call:before {
+  content: "\f105";
+}
+.caravan:before {
+  content: "\f106";
+}
+.check-circle-alt:before {
+  content: "\f107";
+}
+.check:before {
+  content: "\f108";
+}
+.chevron-down:before {
+  content: "\f109";
+}
+.chevron-left:before {
+  content: "\f10a";
+}
+.chevron-right:before {
+  content: "\f10b";
+}
+.chevron-up:before {
+  content: "\f10c";
+}
+.clock:before {
+  content: "\f10d";
+}
+.close:before {
+  content: "\f10e";
+}
+.cloudy-day:before {
+  content: "\f10f";
+}
+.dot:before {
+  content: "\f110";
+}
+.download:before {
+  content: "\f111";
+}
+.facebook-filled:before {
+  content: "\f112";
+}
+.facebook-outline:before {
+  content: "\f113";
+}
+.file-text:before {
+  content: "\f114";
+}
+.home-check:before {
+  content: "\f115";
+}
+.image:before {
+  content: "\f116";
+}
+.instagram-filled:before {
+  content: "\f117";
+}
+.instagram-outline:before {
+  content: "\f118";
+}
+.internet:before {
+  content: "\f119";
+}
+.leaf:before {
+  content: "\f11a";
+}
+.light-bulb-alt:before {
+  content: "\f11b";
+}
+.linkedin-filled:before {
+  content: "\f11c";
+}
+.linkedin-outline:before {
+  content: "\f11d";
+}
+.location:before {
+  content: "\f11e";
+}
+.mail:before {
+  content: "\f11f";
+}
+.map-alt:before {
+  content: "\f120";
+}
+.menu:before {
+  content: "\f121";
+}
+.moon:before {
+  content: "\f122";
+}
+.mouse-alt:before {
+  content: "\f123";
+}
+.piggy-bank:before {
+  content: "\f124";
+}
+.play-circle:before {
+  content: "\f125";
+}
+.price-tag:before {
+  content: "\f126";
+}
+.recycled-energy:before {
+  content: "\f127";
+}
+.sun:before {
+  content: "\f128";
+}
+.thunder-lighting:before {
+  content: "\f129";
+}
+.wind:before {
+  content: "\f12a";
+}
+.windsock:before {
+  content: "\f12b";
+}
