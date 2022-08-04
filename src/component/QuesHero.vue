@@ -40,7 +40,7 @@ let checkbtn = ref('')
 let quesnocrct = ref(false)
 
 function getData() {
-   let url = 'https:opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=boolean'
+   let url = 'https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=boolean'
    fetch(url)
       .then(response => {
          return response.json()
